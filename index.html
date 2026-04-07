@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arson Art</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="app">
+
+    <!-- SIDEBAR -->
+    <aside id="sidebar">
+      <div id="logo-block">
+        <div id="logo-matchstick">
+          <div id="matchhead"></div>
+          <div id="matchstick-body"></div>
+        </div>
+        <h1 id="logo-text">ARSON<br/>ART</h1>
+        <p id="logo-sub">strike a canvas</p>
+      </div>
+
+      <div id="controls">
+
+        <div class="control-group">
+          <label for="brush-radius">
+            Brush Radius
+            <span class="val" id="radius-val">20</span>
+          </label>
+          <input type="range" id="brush-radius" min="4" max="90" value="20" />
+        </div>
+
+        <div class="control-group">
+          <label for="flame-intensity">
+            Flame Intensity
+            <span class="val" id="intensity-val">70%</span>
+          </label>
+          <input type="range" id="flame-intensity" min="1" max="100" value="70" />
+        </div>
+
+        <div class="control-group">
+          <label for="flame-precision">
+            Flame Precision
+            <span class="val" id="precision-val">5</span>
+          </label>
+          <input type="range" id="flame-precision" min="1" max="10" value="5" />
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="control-group">
+          <label>Background Color</label>
+          <div id="bg-color-row">
+            <input type="color" id="bg-color-picker" value="#1a0f07" />
+            <button id="btn-bg-transparent" class="pill-btn" title="Set background to transparent">⬜ Clear</button>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <button id="btn-clear" class="action-btn">
+          <span>🔥</span> Burn it All
+        </button>
+
+      </div>
+
+      <div id="tip-block">
+        <p>Hold & drag to burn.<br/>Release to cool.</p>
+      </div>
+
+    </aside>
+
+    <!-- CANVAS AREA -->
+    <main id="canvas-area">
+      <div id="canvas-wrapper">
+        <canvas id="bg-canvas"></canvas>
+        <canvas id="main-canvas"></canvas>
+        <div id="flame-cursor"></div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
